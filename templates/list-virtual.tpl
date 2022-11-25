@@ -34,16 +34,16 @@
                 {if $tab=='all'}<span class='active'>{$PALANG.all}</span>
                 {else}<a href="?domain={$smarty.get.domain}&amp;tab=all{$searchsuffix}">{$PALANG.all}</a>{/if}
 
-                | {if $tab=='mailbox'}<span class='active'>{$PALANG.pOverview_mailbox_title|trim:": "}</span>
-                {else}<a href="?domain={$smarty.get.domain}&amp;tab=mailbox{$searchsuffix}">{$PALANG.pOverview_mailbox_title|trim:": "}</a>{/if}
-
-                | {if $tab=='alias'}<span class='active'>{$PALANG.pOverview_alias_title|trim:": "}</span>
-                {else}<a href="?domain={$smarty.get.domain}&amp;tab=alias{$searchsuffix}">{$PALANG.pOverview_alias_title|trim:": "}</a>{/if}
-
                 {if $boolconf_alias_domain}
                     | {if $tab=='alias_domain'}<span class='active'>{$PALANG.pOverview_alias_domain_title|trim:": "}</span>
                     {else}<a href="?domain={$smarty.get.domain}&amp;tab=alias_domain{$searchsuffix}">{$PALANG.pOverview_alias_domain_title|trim:": "}</a>{/if}
                 {/if}
+
+                | {if $tab=='alias'}<span class='active'>{$PALANG.pOverview_alias_title|trim:": "}</span>
+                {else}<a href="?domain={$smarty.get.domain}&amp;tab=alias{$searchsuffix}">{$PALANG.pOverview_alias_title|trim:": "}</a>{/if}
+
+                | {if $tab=='mailbox'}<span class='active'>{$PALANG.pOverview_mailbox_title|trim:": "}</span>
+                {else}<a href="?domain={$smarty.get.domain}&amp;tab=mailbox{$searchsuffix}">{$PALANG.pOverview_mailbox_title|trim:": "}</a>{/if}
             </div>
         </div>
     </div>
