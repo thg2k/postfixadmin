@@ -291,7 +291,7 @@ $PALANG['pAdminEdit_domain_maxquota_text'] = 'MB | -1 = disable | 0 = unlimited'
 $PALANG['pAdminEdit_domain_quota'] = 'Domain Quota';
 $PALANG['transport'] = 'Transport';
 $PALANG['pAdminEdit_domain_transport_text'] = 'Define transport';
-$PALANG['pAdminEdit_domain_backupmx'] = 'Mail server is backup MX';
+$PALANG['pAdminEdit_domain_backupmx'] = 'Backup MX';
 $PALANG['pAdminEdit_domain_result_error'] = 'Modifying the domain %s failed!';
 
 $PALANG['pAdminCreate_admin_welcome'] = 'Add a new domain admin';

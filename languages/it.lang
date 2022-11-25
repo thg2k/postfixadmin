@@ -282,7 +282,7 @@ $PALANG['pAdminEdit_domain_maxquota_text'] = 'MB | -1 = disabilita | 0 = illimit
 $PALANG['pAdminEdit_domain_quota'] = 'Domain Quota'; # XXX
 $PALANG['transport'] = 'Trasporto';
 $PALANG['pAdminEdit_domain_transport_text'] = 'Definisci il trasporto'; # XXX check / compare with pAdminCreate_domain_transport_text - should be "Define transport"
-$PALANG['pAdminEdit_domain_backupmx'] = 'Questo server è un MX secondario';
+$PALANG['pAdminEdit_domain_backupmx'] = 'MX secondario';
 $PALANG['pAdminEdit_domain_result_error'] = 'Impossibile modificare il dominio! (%s)'; # XXX Text changed to: Modifying the domain %s failed!
 
 $PALANG['pAdminCreate_admin_welcome'] = 'Aggiungi un nuovo amministratore per il dominio';
