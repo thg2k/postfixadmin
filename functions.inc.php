@@ -1472,7 +1472,7 @@ function smtp_mail($to, $from, $data, $password = "", $body = "") {
     $fh = @fsockopen($smtpd_server, $smtpd_port, $errno, $errstr, $timeout);
 
     if (!$fh) {
-        error_log("fsockopen failed - errno: $errno - errstr: $errstr");
+        error_log("fsockopen($smtpd_server:$smtpd_port) failed - errno: $errno - errstr: $errstr");
         return false;
     } else {
         smtp_get_response($fh);
