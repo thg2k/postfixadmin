@@ -17,11 +17,9 @@
             {if isset($search._)}
                 <h4>{$PALANG.pSearch_welcome} {$search._}</h4>
             {else}
-                <h4>{$PALANG.pOverview_welcome}{$fDomain} :</h4>
-                <ul>
-                    <li>{$PALANG.aliases}: {$limit.alias_count} / {$limit.aliases}</li>
-                    <li>{$PALANG.mailboxes}: {$limit.mailbox_count} / {$limit.mailboxes}</li>
-                </ul>
+                <h4>{$PALANG.pOverview_welcome}{$fDomain}:</h4>
+                <p>{$PALANG.aliases}: {$limit.alias_count} / {$limit.aliases}</p>
+                <p>{$PALANG.mailboxes}: {$limit.mailbox_count} / {$limit.mailboxes}</p>
             {/if}
         </div>
         <hr/>
