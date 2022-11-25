@@ -74,8 +74,17 @@
 				</td>
 			{/if}
 			<td>{$item.modified}</td>
-			<td><a href="{#url_editactive#}mailbox&amp;id={$item.username|escape:"url"}&amp;active={if ($item.active==0)}1{else}0{/if}&amp;token={$smarty.session.PFA_token|escape:"url"}"
-				>{if $item.active==1}{$PALANG.YES}{else}{$PALANG.NO}{/if}</a></td>
+			<td>
+				<form method="get" action="editactive.php">
+					<input type="hidden" name="table" value="mailbox">
+					<input type="hidden" name="id" value="{$item.username|escape:"quotes"}">
+					<input type="hidden" name="active" value="{if $item.active==1}0{else}{1}{/if}">
+					<input type="hidden" name="token" value="{$smarty.session.PFA_token|escape:"quotes"}">
+					<button type="submit" class="btn {if $item.active==1}btn-success{else}btn-danger{/if}" onclick="return confirm ('{if $item.active==1}{$PALANG.confirm_disable}{else}{$PALANG.confirm_enable}{/if}{$PALANG.mailboxes}: {$item.username}');">
+						{if $item.active==1}{$PALANG.YES}{else}{$PALANG.NO}{/if}
+					</button>
+				</form>
+      </td>
 			{if $CONF.vacation_control_admin===YES && $CONF.vacation===YES}
 				{if $item.v_active!==-1}
 					{if $item.v_active==1}

@@ -38,7 +38,7 @@
 	{/foreach}
 	<thead>
 	<tr>
-		<th style="text-align:center;" colspan="{$colcount}">{$PALANG.{$msg.list_header}}</th>
+		<th style="text-align:center;" colspan="{$colcount}">{$PALANG.{$msg.list_header}|trim:": "}</th>
 	</tr>
 	</thead>
 {/if}
@@ -82,7 +82,8 @@
 *}
                     {elseif $key == 'active'}
                         {if $item._can_edit}
-                            <a class="btn btn-warning" href="{#url_editactive#}{$table}&amp;id={$RAW_item.$id_field|escape:"url"}&amp;active={if ($item.active==0)}1{else}0{/if}&amp;token={$smarty.session.PFA_token|escape:"url"}">{$item._active}</a>
+                            <a class="btn {if $item.active==1}btn-success{else}btn-danger{/if}" href="{#url_editactive#}{$table}&amp;id={$RAW_item.$id_field|escape:"url"}&amp;active={if ($item.active==0)}1{else}0{/if}&amp;token={$smarty.session.PFA_token|escape:"url"}"
+                                onclick="return confirm ('{if $item.active==1}{$PALANG.confirm_disable}{else}{$PALANG.confirm_enable}{/if}{$PALANG.{$msg.list_header}|trim:": "}: {$RAW_item.$id_field}');">{$item._active}</a>
                         {else}
                             {$item._active}
                         {/if}

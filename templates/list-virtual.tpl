@@ -78,7 +78,7 @@
         <table class="table table-hover" id="mailbox_table">
             <thead>
             <tr>
-                <th style="text-align:center;" colspan="{$colspan}">{$PALANG.pOverview_mailbox_title}</th>
+                <th style="text-align:center;" colspan="{$colspan}">{$PALANG.pOverview_mailbox_title|trim:": "}</th>
             </tr>
             </thead>
             {if $tMailbox}
